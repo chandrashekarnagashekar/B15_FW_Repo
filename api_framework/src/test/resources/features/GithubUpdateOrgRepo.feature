@@ -21,7 +21,7 @@ Feature: Update Repository under the organization end point
   Scenario Outline: Update a github repository negative
     Given Header has "Authorization" with value "<token>"   
     And Input JSON contains "<Repo_Name>","<description>","<private>"
-    When I execute "POST" request    
+    When I execute "PATCH" request    
     Then I verify statuscode is <status_code>
       
   Examples:
